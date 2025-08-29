@@ -9,6 +9,9 @@ public class Principal {
         meuFilme.avalia(9);
         meuFilme.avalia(8);
         meuFilme.avalia(9);
+        System.out.println("Total de avaliações "+ meuFilme.getTotalDeAvaliacoes());
+        System.out.println(meuFilme.pegaMedia());
+
 
         System.out.println("média de avaliações do filme: " + meuFilme.pegaMedia());
 
