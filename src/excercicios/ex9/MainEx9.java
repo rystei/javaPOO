@@ -20,8 +20,6 @@ public class MainEx9 {
         System.out.println("Nota 3:" + aluno2.getNotas3());
         System.out.println("Média: " + aluno2.calcularMedia());
         System.out.println();
-
-        teste
     }
 
 }
