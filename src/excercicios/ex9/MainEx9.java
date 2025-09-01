@@ -21,6 +21,7 @@ public class MainEx9 {
         System.out.println("Média: " + aluno2.calcularMedia());
         System.out.println();
 
+        teste
     }
 
 }
