@@ -1,4 +1,6 @@
 import br.com.screenmatch.calculo.CalculadoraDeTempo;
+import br.com.screenmatch.calculo.FiltroRecomendacao;
+import br.com.screenmatch.modelos.Episodio;
 import br.com.screenmatch.modelos.Filme;
 import br.com.screenmatch.modelos.Serie;
 
@@ -12,7 +14,7 @@ public class Principal {
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
         meuFilme.exibeFichaTecnica();
-        meuFilme.avalia(9);
+        meuFilme.avalia(1);
         meuFilme.avalia(8);
         meuFilme.avalia(9);
 
@@ -38,5 +40,14 @@ public class Principal {
         calculadoraDeTempo.inclui(outroFilme);
         calculadoraDeTempo.inclui(lost);
         System.out.println(calculadoraDeTempo.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
     }
 }
